@@ -52,7 +52,8 @@ window.crmPluginConfig = {
 
 
 <!-- =========================================================
-     KOMMO
+     KOMMO GREEN BET
+     ID: 1079335
      ========================================================= -->
 
 <script>
@@ -106,100 +107,119 @@ window.crmPluginConfig = {
 
 
 <!-- =========================================================
-     FACEBOOK PIXEL
-     
-     SOLO PAGEVIEW.
+     META PIXEL GREEN BET
 
-     NO Contact.
+     EVENTOS DEL NAVEGADOR:
 
-     NO ClickWhatsAppButton.
+     1. PageView
+     2. Contact al abrir ChatWeb
 
-     NO evento al abrir el ChatWeb.
-
-     CONTACT VIENE EXCLUSIVAMENTE DESDE:
-
-     KOMMO
-       ↓
-     CLOUDFLARE WORKER
-       ↓
-     META CONVERSIONS API
+     NO:
+     - Cloudflare
+     - CAPI
+     - FBP/FBC
+     - ClickWhatsAppButton
      ========================================================= -->
 
 <script>
 
-!function(f,b,e,v,n,t,s){
+(function(){
 
-  if(f.fbq)return;
-
-  n=f.fbq=function(){
-
-    n.callMethod ?
-      n.callMethod.apply(n,arguments) :
-      n.queue.push(arguments);
-
-  };
-
-  if(!f._fbq)
-    f._fbq=n;
-
-  n.push=n;
-
-  n.loaded=true;
-
-  n.version='2.0';
-
-  n.queue=[];
-
-  t=b.createElement(e);
-
-  t.async=true;
-
-  t.src=v;
-
-  s=b.getElementsByTagName(e)[0];
-
-  s.parentNode.insertBefore(t,s);
-
-}(
-  window,
-  document,
-  'script',
-  'https://connect.facebook.net/en_US/fbevents.js'
-);
+  'use strict';
 
 
-/* =========================================================
-   PIXEL GREEN BET
-   =========================================================
+  !function(f,b,e,v,n,t,s){
 
-   SOLO PageView.
+    if(f.fbq)return;
 
-   NO Contact.
+    n=f.fbq=function(){
 
-   NO ClickWhatsAppButton.
+      n.callMethod ?
+        n.callMethod.apply(
+          n,
+          arguments
+        ) :
+        n.queue.push(arguments);
 
-   NO evento al abrir ChatWeb.
-
-   ========================================================= */
-
-fbq(
-  'init',
-  '2918687168465376'
-);
+    };
 
 
-fbq(
-  'track',
-  'PageView'
-);
+    if(!f._fbq)
+      f._fbq=n;
 
 
-console.log(
-  '✅ GREEN BET - PageView enviado'
-);
+    n.push=n;
+
+    n.loaded=true;
+
+    n.version='2.0';
+
+    n.queue=[];
+
+
+    t=b.createElement(e);
+
+    t.async=true;
+
+    t.src=v;
+
+
+    s=b.getElementsByTagName(e)[0];
+
+    s.parentNode.insertBefore(t,s);
+
+  }(
+    window,
+    document,
+    'script',
+    'https://connect.facebook.net/en_US/fbevents.js'
+  );
+
+
+  /*
+   * PIXEL GREEN BET
+   */
+
+  fbq(
+    'init',
+    '2918687168465376'
+  );
+
+
+  /*
+   * PAGEVIEW
+   */
+
+  fbq(
+    'track',
+    'PageView'
+  );
+
+
+  console.log(
+    '========================================'
+  );
+
+  console.log(
+    '✅ GREEN BET PIXEL INICIALIZADO'
+  );
+
+  console.log(
+    '✅ GREEN BET PAGEVIEW ENVIADO'
+  );
+
+  console.log(
+    '========================================'
+  );
+
+})();
 
 </script>
 
+
+<!-- =========================================================
+     NOSCRIPT PAGEVIEW
+     ========================================================= -->
 
 <noscript>
 
@@ -208,16 +228,17 @@ console.log(
     width="1"
     style="display:none"
     src="https://www.facebook.com/tr?id=2918687168465376&ev=PageView&noscript=1"
+    alt=""
   >
 
 </noscript>
 
 
-<!-- =========================================================
-     ESTILOS
-     ========================================================= -->
-
 <style>
+
+/* =========================================================
+   RESET
+   ========================================================= */
 
 *{
   margin:0;
@@ -225,6 +246,10 @@ console.log(
   box-sizing:border-box;
 }
 
+
+/* =========================================================
+   BODY
+   ========================================================= */
 
 html,
 body{
@@ -250,6 +275,10 @@ body{
 
 }
 
+
+/* =========================================================
+   WRAPPER
+   ========================================================= */
 
 .wrapper{
 
@@ -277,6 +306,10 @@ body{
 
 }
 
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero{
 
@@ -336,6 +369,10 @@ body{
 }
 
 
+/* =========================================================
+   CTA
+   ========================================================= */
+
 .cta-bar{
 
   position:relative;
@@ -364,6 +401,10 @@ body{
 
 }
 
+
+/* =========================================================
+   OPERADORES
+   ========================================================= */
 
 .ops{
 
@@ -412,6 +453,10 @@ body{
 
 }
 
+
+/* =========================================================
+   BONO
+   ========================================================= */
 
 .bonus-line{
 
@@ -470,6 +515,10 @@ body{
 
 }
 
+
+/* =========================================================
+   BOTÓN
+   ========================================================= */
 
 .wa-btn{
 
@@ -550,6 +599,10 @@ body{
 }
 
 
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 .footer-text{
 
   text-align:center;
@@ -562,6 +615,10 @@ body{
 
 }
 
+
+/* =========================================================
+   ANIMACIONES
+   ========================================================= */
 
 @keyframes shake{
 
@@ -710,9 +767,9 @@ body{
 
   transition:
 
-    opacity 0.3s ease,
+    opacity 0.1s ease,
 
-    visibility 0.3s ease;
+    visibility 0.1s ease;
 
   z-index:9999;
 
@@ -738,6 +795,10 @@ body{
 
 }
 
+
+/* =========================================================
+   BOTÓN CERRAR
+   ========================================================= */
 
 #kommoClose{
 
@@ -941,25 +1002,19 @@ body{
     </div>
 
 
-    <!-- BOTÓN KOMMO -->
-
     <button
       class="wa-btn"
       id="openChatBtn"
       type="button"
     >
 
-      <!-- ICONO WHATSAPP -->
-
       <svg viewBox="0 0 24 24">
 
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.198.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
 
       </svg>
 
-
       HABLÁ AHORA Y OBTENÉ TU BONO
-
 
     </button>
 
@@ -998,11 +1053,11 @@ body{
 </button>
 
 
-<!-- =========================================================
-     JAVASCRIPT CHATWEB
-     ========================================================= -->
-
 <script>
+
+/* =========================================================
+   ELEMENTOS
+   ========================================================= */
 
 const frame =
   document.getElementById(
@@ -1024,12 +1079,93 @@ const openBtn =
 
 let ready = false;
 
+let contactSent = false;
+
+
+/* =========================================================
+   CONTACT
+
+   Se dispara cuando se abre el ChatWeb.
+   Una sola vez por carga.
+   ========================================================= */
+
+function sendContactEvent(){
+
+  if(contactSent){
+
+    console.log(
+      '⚠️ GREEN BET CONTACT YA FUE ENVIADO'
+    );
+
+    return;
+
+  }
+
+
+  if(
+    typeof window.fbq !==
+    'function'
+  ){
+
+    console.log(
+      '⏳ META PIXEL TODAVÍA NO ESTÁ LISTO'
+    );
+
+    setTimeout(
+      sendContactEvent,
+      100
+    );
+
+    return;
+
+  }
+
+
+  try{
+
+    window.fbq(
+      'track',
+      'Contact'
+    );
+
+
+    contactSent = true;
+
+
+    console.log(
+      '========================================'
+    );
+
+    console.log(
+      '✅ GREEN BET CONTACT ENVIADO A META'
+    );
+
+    console.log(
+      '========================================'
+    );
+
+
+  }catch(error){
+
+    console.error(
+      '❌ ERROR ENVIANDO GREEN BET CONTACT:',
+      error
+    );
+
+  }
+
+}
+
 
 /* =========================================================
    ABRIR CHAT REAL
    ========================================================= */
 
 function openReal(){
+
+  /*
+   * Mostrar ChatWeb inmediatamente.
+   */
 
   frame.classList.add(
     'is-open'
@@ -1041,6 +1177,17 @@ function openReal(){
   );
 
 
+  /*
+   * CONTACT AL ABRIR CHAT
+   */
+
+  sendContactEvent();
+
+
+  /*
+   * Abrir Kommo.
+   */
+
   try{
 
     crmPlugin(
@@ -1049,15 +1196,15 @@ function openReal(){
 
 
     console.log(
-      '✅ ChatWeb Kommo abierto'
+      '✅ GREEN BET CHATWEB ABIERTO'
     );
 
 
-  }catch(e){
+  }catch(error){
 
-    console.log(
-      '❌ Error abriendo ChatWeb:',
-      e
+    console.error(
+      '❌ ERROR ABRIENDO GREEN BET CHATWEB:',
+      error
     );
 
   }
@@ -1066,16 +1213,23 @@ function openReal(){
 
 
 /* =========================================================
-   ABRIR CHAT MANUALMENTE
+   BOTÓN
    ========================================================= */
 
 function openChat(){
 
-  if(ready){
+  if(!ready){
 
-    openReal();
+    console.log(
+      '⏳ KOMMO TODAVÍA NO ESTÁ LISTO'
+    );
+
+    return;
 
   }
+
+
+  openReal();
 
 }
 
@@ -1102,7 +1256,7 @@ function closeChat(){
       'runChatHide'
     );
 
-  }catch(e){}
+  }catch(error){}
 
 }
 
@@ -1120,12 +1274,17 @@ function bind(){
 
     setTimeout(
       bind,
-      150
+      100
     );
 
     return;
 
   }
+
+
+  console.log(
+    '⏳ ESPERANDO CHATWEB GREEN BET...'
+  );
 
 
   crmPlugin(
@@ -1136,22 +1295,17 @@ function bind(){
 
 
       console.log(
-        '✅ Kommo ChatWeb listo'
+        '✅ CHATWEB GREEN BET LISTO'
       );
 
 
-      /* =====================================================
-         ABRIR AUTOMÁTICAMENTE AL ENTRAR
-         ===================================================== */
+      /*
+       * ABRIR AUTOMÁTICAMENTE
+       *
+       * SIN DELAY DE 300/500 MS.
+       */
 
-      setTimeout(
-        function(){
-
-          openReal();
-
-        },
-        300
-      );
+      openReal();
 
     }
   );
